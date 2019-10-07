@@ -26,6 +26,7 @@ routes.post('/rooms', RoomController.store);
 routes.get('/providers', ProviderController.index);
 
 routes.post('/appointments', AppointmentController.store);
+routes.get('/appointments', AppointmentController.index);
 
 routes.post('/files', upload.single('file'), FileController.store);
 
