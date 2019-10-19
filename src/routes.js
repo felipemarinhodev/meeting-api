@@ -8,6 +8,7 @@ import RoomController from './app/controllers/RoomController';
 import SessionController from './app/controllers/SessionController';
 import ProviderController from './app/controllers/ProviderController';
 import ScheduleController from './app/controllers/ScheduleController';
+import AvailableController from './app/controllers/AvailableController';
 import AppointmentController from './app/controllers/AppointmentController';
 import NotificationController from './app/controllers/NotificationController';
 
@@ -24,6 +25,7 @@ routes.use(authMiddleware);
 routes.put('/users', UserController.update);
 
 routes.post('/rooms', RoomController.store);
+routes.get('/rooms/:roomId/available', AvailableController.index);
 
 routes.get('/providers', ProviderController.index);
 
