@@ -27,7 +27,7 @@ class Database {
 
   mongo() {
     this.mongoConnection = mongoose
-      .connect('mongodb://localhost:27017/meeting', {
+      .connect(process.env.MONGO_URL, {
         useNewUrlParser: true, // Pois estou utilizando uma url em um formato mais novo.
         useUnifiedTopology: true,
       })
